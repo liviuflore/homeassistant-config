@@ -1,0 +1,79 @@
+# home sensors
+
+- platform: mitemp
+  mac: '4C:65:A8:D0:46:11'
+  name: 'TH_livingroom'
+
+- platform: mitemp
+  mac: '4C:65:A8:D0:45:EF'
+  name: 'TH_bedroom'
+
+
+# transmission
+- platform: transmission
+  host: !secret transmission_host
+  port: !secret transmission_port
+  username: !secret transmission_username
+  password: !secret transmission_password
+  monitored_variables:
+    - 'current_status'
+    - 'download_speed'
+    - 'upload_speed'
+
+# weather
+- platform: yr
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_probability
+    - temperature
+    - humidity
+    - temperature_max
+    - temperature_min
+
+# owntracker
+#- platform: mqtt
+#  state_topic: "owntracks/liviu/phone_s6"
+#  name: "Liviu Phone Battery"
+#  qos: 0
+#  unit_of_measurement: "%"
+#  value_template: '{{ value_json.batt }}'
+#- platform: mqtt
+#  state_topic: "owntracks/adina/phone_minione"
+#  name: "Adina Phone Battery"
+#  qos: 0
+#  unit_of_measurement: "%"
+#  value_template: '{{ value_json.batt }}'
+
+# travel times
+- platform: google_travel_time
+  name: Liviu Work Travel
+  api_key: !secret google_api_key
+  origin: Home
+  destination: Liviu Work
+  options:
+    mode: driving
+    departure_time: '6:30:00'
+- platform: google_travel_time
+  name: Liviu Home Travel
+  api_key: !secret google_api_key
+  origin: Liviu Work
+  destination: Home
+  options:
+    mode: driving
+    departure_time: '16:30:00'
+
+# ETAs
+- platform: google_travel_time
+  name: Liviu Location To Home
+  api_key: !secret google_api_key
+  origin: device_tracker.liviu_phone_s6
+  destination: Home
+- platform: google_travel_time
+  name: Adina Location To Home
+  api_key: !secret google_api_key
+  origin: device_tracker.adina_phone_minione
+  destination: Home
+

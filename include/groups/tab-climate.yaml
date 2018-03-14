@@ -1,0 +1,27 @@
+climate:
+  view: yes
+  entities:
+    - group.inside
+    - group.outside
+    - group.graphs
+
+inside:
+  name: Inside
+  entities:
+    - sensor.th_livingroom_temperature
+    - sensor.th_livingroom_humidity
+    - sensor.th_bedroom_temperature
+    - sensor.th_bedroom_humidity
+
+outside:
+  name: Outside
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_precip_probability
+
+graphs:
+  name: graphs
+  entities:
+    - history_graph.temperature
+    - history_graph.humidity

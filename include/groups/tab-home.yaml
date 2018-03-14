@@ -1,0 +1,47 @@
+default_view:
+  name: Home
+  icon: mdi:home
+  view: yes
+  entities:
+    - group.family_info
+    - group.travel_times
+    - group.climate_home
+
+liviu:
+  name: Liviu
+  entities:
+    - device_tracker.liviu_phone_s6
+adina:
+  name: Adina
+  entities:
+    - device_tracker.adina_phone_minione
+family:
+  name: Family
+  entities:
+    - group.liviu
+    - group.adina
+family_info:
+  name: Family Info
+  entities:
+    - group.liviu
+    - sensor.liviu_phone_battery
+    - sensor.liviu_location_to_home
+    - group.adina
+    - sensor.adina_phone_battery
+    - sensor.adina_location_to_home
+
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.liviu_work_travel
+    - sensor.liviu_home_travel
+
+climate_home:
+  name: Climate
+  entities:
+    - sensor.th_livingroom_temperature
+    - sensor.th_livingroom_humidity
+    - sensor.th_bedroom_temperature
+    - sensor.th_bedroom_humidity
+
+

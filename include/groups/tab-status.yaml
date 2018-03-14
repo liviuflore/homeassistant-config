@@ -1,0 +1,12 @@
+status:
+  view: yes
+  entities:
+    - group.sensors_battery
+
+sensors_battery:
+  name: Sensors battery
+  entities:
+    - sensor.th_livingroom_battery
+    - sensor.th_bedroom_battery
+
+

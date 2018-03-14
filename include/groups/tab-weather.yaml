@@ -1,0 +1,18 @@
+weather:
+  view: yes
+  entities:
+    - weather.weather
+    - weather.bucharest
+    - weather.darksky
+    - group.weather_f
+
+
+weather_f:
+  name: Weather Forecast
+  entities:
+    - sun.sun
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_probability

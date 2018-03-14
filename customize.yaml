@@ -1,0 +1,79 @@
+# group order
+group.default_view:
+  order: 1
+group.climate:
+  order: 2
+group.media:
+  order: 3
+group.weather:
+  order: 4
+group.status:
+  order: 5
+
+# groups
+group.liviu:
+  entity_picture: /local/liviu.jpg
+  friendly_name: Liviu
+group.adina:
+  entity_picture: /local/adina.jpg
+  friendly_name: Adina
+
+# Device Trackers
+device_tracker.liviu_phone_s6:
+  entity_picture: /local/liviu.jpg
+  friendly_name: Liviu
+device_tracker.adina_phone_minione:
+  entity_picture: /local/adina.jpg
+  friendly_name: Adina
+
+# Location stats owntrack
+sensor.liviu_phone_battery:
+  friendly_name: Phone Battery
+  icon: mdi:battery
+sensor.liviu_location_to_home:
+  friendly_name: Home ETA
+  icon: mdi:timelapse
+sensor.adina_phone_battery:
+  friendly_name: Phone Battery
+  icon: mdi:battery
+sensor.adina_location_to_home:
+  friendly_name: Home ETA
+  icon: mdi:timelapse
+
+# Travel times
+group.travel_times:
+  friendly_name: Travel Times
+sensor.liviu_work_travel:
+  icon: mdi:briefcase
+  friendly_name: Home To Liviu Work
+sensor.liviu_home_travel:
+  icon: mdi:home
+  friendly_name: Liviu Work To Home
+  
+# Weather forecast
+sensor.dark_sky_summary:
+  friendly_name: Summary
+sensor.dark_sky_temperature:
+  friendly_name: Temperature
+sensor.dark_sky_humidity:
+  friendly_name: Humidity
+sensor.dark_sky_precip:
+  friendly_name: Precipitation
+sensor.dark_sky_precip_probability:
+  friendly_name: Precipitation Probability
+
+# sensors
+sensor.th_livingroom_temperature:
+  friendly_name: Livingroom Temperature
+sensor.th_livingroom_humidity:
+  friendly_name: Livingroom Humidity
+sensor.th_livingroom_battery:
+  friendly_name: Livingroom Battery
+  icon: mdi:battery
+sensor.th_bedroom_temperature:
+  friendly_name: Bedroom Temperature
+sensor.th_bedroom_humidity:
+  friendly_name: Bedroom Humidity
+sensor.th_bedroom_battery:
+  friendly_name: Bedroom Battery
+  icon: mdi:battery

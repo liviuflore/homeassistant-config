@@ -1,0 +1,19 @@
+media:
+  view: yes
+  entities:
+    - group.players
+    - group.transmission
+
+players:
+  name: Players
+  entities:
+    - media_player.osmc
+    - media_player.samsung_tv_remote
+    - media_player.panasonic_viera
+    
+transmission:
+  name: Transmission
+  entities:
+    - sensor.transmission_status
+    - sensor.transmission_down_speed
+    - sensor.transmission_up_speed

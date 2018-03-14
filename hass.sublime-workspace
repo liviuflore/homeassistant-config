@@ -1,0 +1,473 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cache",
+				"cache_path_tmp"
+			],
+			[
+				"set",
+				"set_inprogress"
+			],
+			[
+				"get",
+				"getall"
+			],
+			[
+				"do",
+				"download-dir"
+			],
+			[
+				"chec",
+				"checkLibrary"
+			],
+			[
+				"RSS",
+				"RssFeed"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"compo",
+				"component"
+			],
+			[
+				"revers",
+				"reverseLookup"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"to",
+				"tokenChangeSubs"
+			],
+			[
+				"them",
+				"themeName"
+			],
+			[
+				"IsObj",
+				"IsObjectiveSettingAttrs"
+			],
+			[
+				"obj",
+				"objectiveValue"
+			],
+			[
+				"objective",
+				"objectiveType"
+			],
+			[
+				"ac",
+				"activities"
+			],
+			[
+				"obje",
+				"objectiveType"
+			],
+			[
+				"objec",
+				"objectiveType"
+			],
+			[
+				"rename",
+				"renamed_extracted_dir"
+			],
+			[
+				"extract",
+				"extracted_dir"
+			],
+			[
+				"sen",
+				"sentences"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "conv",
+		"selected_items":
+		[
+			[
+				"conv",
+				"Convert Case: Lower Case"
+			],
+			[
+				"sync",
+				"Package Syncing: Push Settings"
+			],
+			[
+				"the",
+				"Boxy Theme: Configuration"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Indent XML"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"project",
+				"Project: Refresh Folders"
+			],
+			[
+				"op",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"theme",
+				"Material Theme: Configuration"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"color",
+				"Color Picker: Insert Color"
+			],
+			[
+				"colo",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"incre",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 430.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"//192.168.1.32/homeassistant"
+	],
+	"file_history":
+	[
+		"/D/p4/dev/aptixia/pkgget/test.py",
+		"/D/p4/dev/aptixia/pkgget/pkgget.ini",
+		"/D/p4/dev/packages/sdm/sdmcslib/ixload/build_context.ini",
+		"/D/p4/dev/ixload/apps/ixload/main/ixload_apps-build_context.ini",
+		"/D/code/rpi/HA.config/configuration.yaml",
+		"/D/code/rpi/ha_config/secrets.yaml",
+		"/D/code/rpi/ha_config/include/zones.yaml",
+		"/D/code/rpi/ha_config/include/panels.yaml",
+		"/D/code/rpi/ha_config/include/sensors.yaml",
+		"/D/code/rpi/ha_config/customize.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/www/custom_ui/floorplan/ha-floorplan.html",
+		"/D/code/rpi/ha_config/include/device_trackers.yaml",
+		"/D/code/rpi/ha_commands",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/ixload/packages/diameter/main/build#3.sh",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/ixload/packages/diameter/main/Makefile#4",
+		"/D/p4/dev/aptixia/pkgget/pkgget.py",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/C/Program Files/Ixia/IxOS/8.30-EA-Patch1/IxServ20180219-132154.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/Error_logs_Port_crash/192.20.199.66/C/Program Files/Ixia/IxOS/8.30-EA-Patch1/IxServ20180130-221331.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/ports/10.0.1.12/var/log/kse_crash.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/ports/10.0.1.10/var/log/kse_crash.log",
+		"/D/code/rpi/ha_config/configuration.yaml",
+		"/D/code/rpi/ha_config/include/weather.yaml",
+		"/D/code/rpi/ha_config/include/groups/tab-home.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/www/custom_ui/floorplan/lib/floorplan.js",
+		"/D/code/rpi/HA.config/includes/device_trackers.yaml",
+		"/D/code/rpi/ha_config/include/groups.yaml",
+		"/D/code/rpi/HA.config/includes/sensors.yaml",
+		"/D/code/rpi/HA.config/includes/iframes.yaml",
+		"/D/code/rpi/HA.config/includes/panels.yaml",
+		"/D/code/rpi/HA.config/includes/media_players.yaml",
+		"/D/code/rpi/HA.config/includes/groups/tab-home.yaml",
+		"/D/code/rpi/HA.config/customize.yaml",
+		"/D/code/rpi/ha_config/known_devices.yaml",
+		"/D/code/rpi/ha_config/groups.yaml",
+		"/D/code/rpi/ha_config/automations.yaml",
+		"/D/code/rpi/ha_config/scripts.yaml",
+		"/D/p4/dev/ixload/packages/icc/versions.ini",
+		"/D/code/rpi/miflora/backends/gatttool.py",
+		"/D/code/rpi/miflora/backends/bluepy.py",
+		"/D/code/rpi/miflora/mitemp_poller.py",
+		"/D/code/rpi/miflora/miflora_poller.py",
+		"/D/code/rpi/test_mitemp.py",
+		"/D/code/rpi/mitemp.py",
+		"/D/code/rpi/home-assistant-master/homeassistant/components/sensor/miflora.py",
+		"/Z/p4/dev/ixload/apps/ixload/monthly/ixload_apps-build_context.ini",
+		"/D/code/rpi/miflora/mitemp.py",
+		"/D/code/rpi/home-assistant-master/homeassistant/components/nuimo_controller.py",
+		"/D/p4/dev/ixload/packages/diameter/versions.ini",
+		"/Z/p4/dev/ixload/core/pcpu/main/pcpu/scripts/SConscript",
+		"/C/Users/livflore/AppData/Local/Temp/_tc/bin/spawn_kse.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_busyrtp/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ixnam_dummy/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ixim_arp/lbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ip6_fragment_dummy/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/driver/kbuild.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/build.sh",
+		"/Z/p4/dev/packages/ixnamcb/main/src/kbuild.sh",
+		"/Z/p4/dev/packages/ixnamcb/main/build.sh",
+		"/Z/p4/dev/aptixia/pkgget/pkgget.py",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixtcp/main/ixstack_v1/src/kbuild#3.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_ixstack/Makefile",
+		"/Z/p4/dev/packages/pstream/main/pstream_ko_lib/lbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_ixstack/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/versions.ini",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/pstream/branchinfo#29.ini",
+		"/Z/p4/dev/packages/pstream/main/publish.sh",
+		"/Z/p4/dev/packages/pstream/main/build.sh",
+		"/Z/p4/dev/packages/busyrtp/main/build.sh",
+		"/Z/p4/dev/packages/pstream/main/build_context.ini",
+		"/C/Users/livflore/Desktop/WhatsApp Chat with Sf.S.tovarasiFENGshui0197.txt",
+		"/Z/p4/dev/packages/busyrtp/main/build_context.ini",
+		"/Z/p4/dev/packages/ixnamcb/main/build_context.ini",
+		"/Z/p4/dev/packages/devappdata/cpd/build_context.ini",
+		"/D/p4/dev/packages/pstream/main/build_context.ini",
+		"/Z/p4/dev/packages/pstream/main/driver/pstream_stats.c",
+		"/Z/p4/dev/packages/pstream/main/driver/pstream_stream.c",
+		"/Z/p4/dev/packages/devappdata/cpd/src/kbuild.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/src/Makefile",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixtcp/main/daily#98.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/components/common/8.50/ixia-linux/Source/linux/scripts/build-module.sh",
+		"/Z/p4/dev/packages/ixnamcb/main/publish.sh",
+		"/Z/p4/dev/packages/ixnamcb/versions.ini",
+		"/Z/p4/dev/packages/ixnamcb/main/src/Makefile",
+		"/Z/p4/dev/packages/ixrte/main/build_context.ini",
+		"/Z/p4/dev/packages/ixnamcb/branchinfo.ini",
+		"/Z/p4/dev/packages/devappdata/versions.ini",
+		"/Z/p4/dev/packages/pstream/main/driver/Makefile",
+		"/D/p4/dev/ixload/protocols/voice/main/build.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/components/common/tar/package.ini",
+		"/Z/p4/dev/packages/devappdata/cpd/components/common/8.50/ixia-linux/Source/sdk-x86_64-defs.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/src/devappdata.h",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/pstream/main/build#67.sh",
+		"/D/p4/dev/ixload/apps/ixload/main/devbuild.py",
+		"/Z/p4/dev/packages/busyrtp/main/build_utils.sh",
+		"/X/pkgget_p4_login.sh",
+		"/X/pkgget_auto.sh",
+		"/D/pkgget_auto.sh",
+		"/D/p4/tests/http_ubua/flow.txt",
+		"/D/p4/dev/packages/ixvoiceplugin/monthly/src/IXVVoIPEngine/IXVVoIPEngine.rc",
+		"/D/code/web/ngx/ngx-backend/rssdownloader.config",
+		"/D/code/web/ngx/ngx-backend/package.json",
+		"/D/code/web/ngx/ngx-backend/node_modules/rss-parser/lib/parser.js",
+		"/D/code/web/ngx/ngx-backend/node_modules/debug/src/node.js",
+		"/D/code/web/ngx/ngx-backend/modules/rss-download/rss-downloader.js",
+		"/D/code/web/ngx/ngx-backend/modules/rss-download/rss-download.module.js",
+		"/D/code/web/ngx/ngx-backend/modules/ix-player/ix-player.module.js",
+		"/D/code/web/ngx/ngx-admin/package.json",
+		"/D/code/web/ngx/start_ngx.bat",
+		"/D/code/web/ngx/ngx-backend/app.js",
+		"/D/code/web/ngx/ngx-backend/player.config",
+		"/D/code/web/ngx/ngx.sublime-project",
+		"/D/code/web/ngx/ngx-admin/src/app/pages/pages.module.ts",
+		"/D/code/web/ngx/ngx-admin/src/main.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/@core/data/state.service.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/@core/data/data.module.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/app2-routing.module.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/app2.component.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/app2.module.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/@core/core.module.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/app.component.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/@core/data/users.service.ts",
+		"/D/code/web/ngx/ngx-admin/src/app/pages/qplayer/qplayer.component.ts",
+		"/D/code/web/ngx/ngx-backend/config.js",
+		"/D/p4/dev/ixload/apps/ixload/monthly/ixload_apps-build_context.ini",
+		"/D/code/web/ngx/ngx-backend/node_modules/transmission/lib/transmission.js",
+		"/D/code/web/ngx/ngx-backend/node_modules/mongodb/lib/mongo_client.js",
+		"/D/code/web/ngx/ngx-backend/node_modules/mongodb/lib/utils.js",
+		"/D/code/web/ngx/ngx-backend/node_modules/mongodb/index.js"
+	],
+	"find":
+	{
+		"height": 49.0
+	},
+	"find_in_files":
+	{
+		"height": 190.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 48.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "hass.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 374.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 145.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

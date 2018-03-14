@@ -1,0 +1,29 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 300
+  icon: mdi:home
+
+- name: Liviu Work
+  latitude: !secret liviu_work_latitude
+  longitude: !secret liviu_work_longitude
+  radius: 300
+  icon: mdi:briefcase
+
+- name: Liviu's Parents
+  latitude: !secret liviu_home_latitude
+  longitude: !secret liviu_home_longitude
+  radius: 300
+  icon: mdi:home-outline
+
+- name: Adina's Parents
+  latitude: !secret adina_home_latitude
+  longitude: !secret adina_home_longitude
+  radius: 300
+  icon: mdi:home-outline
+
+- name: George Home
+  latitude: !secret george_home_latitude
+  longitude: !secret george_home_longitude
+  radius: 300
+  icon: mdi:home-outline

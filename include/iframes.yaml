@@ -1,0 +1,9 @@
+router:
+  title: 'Router'
+  icon: mdi:router-wireless
+  url: 'http://192.168.1.1'
+  
+transmission:
+  title: 'Torrents'
+  icon: mdi:briefcase-download
+  url: 'http://192.168.1.21:9091'

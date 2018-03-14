@@ -1,0 +1,12 @@
+#- platform: owntracks
+
+#- platform: nmap_tracker
+#  hosts: 192.168.1.1/24
+#  home_interval: 10
+#  exclude:
+#   - 192.168.1.1-99
+
+#- platform: mqtt
+#  devices:
+#    phone_s6: /location/liviu
+#    phone_minione: /location/adina
