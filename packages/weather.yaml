@@ -1,0 +1,157 @@
+###############################################################################
+#   @author         :   Liviu Flore
+#   @date           :   03/14/2018
+#   @package        :   Weather
+#   @description    :   Weather related stuff! (Current and Forecast)
+#   @details        :   Download the Dark Sky icons from https://www.dr-lex.be/software/download/DarkSky-icons.zip
+#                       and save them under /www/icons/dark_sky/ in your configuration directory.
+###############################################################################
+homeassistant:
+  customize:
+
+    # current weather sensors names
+    sensor.dark_sky_summary:
+      friendly_name: Summary
+    sensor.dark_sky_temperature:
+      friendly_name: Temperature
+    sensor.dark_sky_humidity:
+      friendly_name: Humidity
+    sensor.dark_sky_precip:
+      friendly_name: Precipitation
+    sensor.dark_sky_precip_probability:
+      friendly_name: Precipitation Probability
+
+# Track the sun
+sun:
+
+# Weather card
+weather:
+  - platform: yweather
+    name: Weather
+    woeid: !secret yweather_woeid
+
+# sensors
+sensor:
+  - platform: yr
+
+  - platform: darksky
+    api_key: !secret dark_sky_api_key
+    forecast:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    monitored_conditions:
+      - summary
+      - icon
+      - precip_type
+      - precip_probability
+      - wind_speed
+      - cloud_cover
+      - uv_index
+      - temperature
+      - apparent_temperature
+      - humidity
+      - temperature_min
+      - temperature_max
+      - daily_summary
+      - hourly_summary
+    update_interval: '00:05'
+
+  - platform: season
+
+  - platform: template
+    sensors:
+      forecast_0:
+        friendly_name: "Today"
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon.state ~ '.png'}}
+      forecast_1:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (1 * 86400 ) -%}
+          {{ date | timestamp_custom("Tomorrow (%-m/%-d)") }}
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature_1.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_1.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_1.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_1.state ~ '.png'}}
+      forecast_2:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (2 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature_2.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_2.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_2.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_2.state ~ '.png'}}
+      forecast_3:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (3 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature_3.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_3.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_3.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_3.state ~ '.png'}}
+      forecast_4:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (4 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature_4.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_4.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_4.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_4.state ~ '.png'}}
+      forecast_5:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (5 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+          {{states.sensor.dark_sky_daily_high_temperature_5.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_5.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_5.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_5.state ~ '.png'}}
+      forecast_6:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (6 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+            {{states.sensor.dark_sky_daily_high_temperature_6.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_6.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_6.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_6.state ~ '.png'}}
+      forecast_7:
+        friendly_name_template: >
+          {%- set date = as_timestamp(now()) + (7 * 86400 ) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+        value_template: >
+            {{states.sensor.dark_sky_daily_high_temperature_7.state|round(0)}}°/{{states.sensor.dark_sky_daily_low_temperature_7.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_7.state|round(0)}}%
+        entity_picture_template: >-
+          {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_7.state ~ '.png'}}
+
+# groups
+group:
+  weather_card_forecast:
+    name: Forecast
+    view: no
+    icon: mdi:sun
+    entities:
+      - sensor.forecast_0
+      - sensor.forecast_1
+      - sensor.forecast_2
+      - sensor.forecast_3
+      - sensor.forecast_4
+      - sensor.forecast_5
+      - sensor.forecast_6
+      - sensor.forecast_7
+
+  weather_card_current:
+    view: no
+    name: Current Weather
+    icon: mdi:sun
+    entities:
+      - sun.sun
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_probability

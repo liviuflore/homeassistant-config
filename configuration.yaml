@@ -47,8 +47,6 @@ logger:
 #discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
-# Track the sun
-sun:
 # Cloud
 cloud:
 # Update HASS
@@ -56,8 +54,6 @@ updater:
 
 
 ### COMPONENTS
-
-weather: !include include/weather.yaml
 
 zone: !include include/zones.yaml
 
@@ -77,14 +73,14 @@ history_graph:
     entities:
       - sensor.th_livingroom_temperature
       - sensor.th_bedroom_temperature
-    hours_to_show: 120
+    hours_to_show: 72
   humidity:
     name: Humidity
     entities:
       - sensor.th_livingroom_humidity
       - sensor.th_bedroom_humidity
-    hours_to_show: 120
+    hours_to_show: 72
 
-automation: !include include/automations.yaml
+#automation: !include include/automations.yaml
 
 script: !include include/scripts.yaml

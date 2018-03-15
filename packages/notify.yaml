@@ -1,0 +1,67 @@
+###############################################################################
+#   @author         :   Liviu Flore
+#   @date           :   03/14/2018
+#   @package        :   Weather
+#   @description    :   Notification stuff! (ifttt for now, tts later ....)
+###############################################################################
+homeassistant:
+  customize:
+
+    # Script Stuff
+    #script.home_mode_away:
+    #  friendly_name: Set Home Mode to AWAY
+    script.ifttt_leeo_color_change:
+      hidden: true
+    script.ifttt_notify:
+      hidden: true
+    script.notify_me:
+      hidden: true
+    script.owntracks_update:
+      hidden: true
+
+ifttt:
+  key: !secret ifttt_key
+
+group:
+  Scripts:
+    control: hidden
+    entities:
+      - script.owntracks_update
+      - script.restart_hass
+      - script.update_hass
+      - script.ifttt_leeo_color_change
+      - script.ifttt_notify
+      - script.notify_me
+#      - script.home_mode_away
+
+script:
+###############################################################################
+# Notify Related Scripts
+###############################################################################
+  ifttt_notify:
+    sequence:
+      - condition: template
+        value_template: '{{ message | trim != "" }}'
+      - service: ifttt.trigger
+        data_template:
+          event: "Smart_Home"
+          value1: "{{ message }}"
+          value2: ""
+
+  ifttt_leeo_color_change:
+    sequence:
+      - condition: template
+        value_template: '{{ value1 | trim != "" }}'
+      - service: ifttt.trigger
+        data_template: 
+          event: "LEEO_COLOR_CHANGE"
+          value1: '{{ value1 }}'
+
+  notify_me:
+    sequence:
+      - condition: template
+        value_template: '{{ message | trim != "" }}'
+      - service: script.ifttt_notify
+        data_template:
+          message: "{{ message }}"
+

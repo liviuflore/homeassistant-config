@@ -20,18 +20,6 @@
     - 'download_speed'
     - 'upload_speed'
 
-# weather
-- platform: yr
-- platform: darksky
-  api_key: !secret dark_sky_api_key
-  monitored_conditions:
-    - summary
-    - precip_type
-    - precip_probability
-    - temperature
-    - humidity
-    - temperature_max
-    - temperature_min
 
 # owntracker
 #- platform: mqtt
@@ -46,6 +34,13 @@
 #  qos: 0
 #  unit_of_measurement: "%"
 #  value_template: '{{ value_json.batt }}'
+
+# system monitor
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: /home
+  - type: memory_free
 
 # travel times
 - platform: google_travel_time

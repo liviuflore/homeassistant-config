@@ -50,18 +50,6 @@ sensor.liviu_home_travel:
   icon: mdi:home
   friendly_name: Liviu Work To Home
   
-# Weather forecast
-sensor.dark_sky_summary:
-  friendly_name: Summary
-sensor.dark_sky_temperature:
-  friendly_name: Temperature
-sensor.dark_sky_humidity:
-  friendly_name: Humidity
-sensor.dark_sky_precip:
-  friendly_name: Precipitation
-sensor.dark_sky_precip_probability:
-  friendly_name: Precipitation Probability
-
 # sensors
 sensor.th_livingroom_temperature:
   friendly_name: Livingroom Temperature

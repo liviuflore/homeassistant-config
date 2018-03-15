@@ -4,7 +4,7 @@
 		{
 			"path": ".",
 			"folder_exclude_patterns": [".cloud", "deps", "tts"],
-			"file_exclude_patterns": [".uuid", ".HA_VERSION", "home-assistant.*"]
+			"file_exclude_patterns": [".uuid", "home-assistant.*", "*.db*"]
 		}
 	]
 }

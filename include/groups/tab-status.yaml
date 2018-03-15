@@ -2,6 +2,8 @@ status:
   view: yes
   entities:
     - group.sensors_battery
+    - group.system_monitor
+    - group.internet_speed
 
 sensors_battery:
   name: Sensors battery
@@ -9,4 +11,7 @@ sensors_battery:
     - sensor.th_livingroom_battery
     - sensor.th_bedroom_battery
 
-
+settings:
+  view: yes
+  entities:
+    - group.homeassistant_settings
