@@ -1,134 +1,144 @@
+
+<script src="/local/custom_ui/lib/moment.min.js"></script>
+
+<meta name="viewport" content="width=device-width">
+
 <dom-module id='ha-panel-tvshows'>
   <template>
-    <style include="iron-positioning ha-style">
-		.loading-container {
-			text-align: center;
-			padding: 8px;
-		}
-		paper-toast {
-            z-index: 1;
-        }
-		.content {
-			padding: 0px 10px 0px 10px;
-		}
-		.tvshows-list-table {
-			width: 100%;
-			border-spacing: 0px !important;
-		}
-		.tvshows-list-table td {
-			border: none !important;
-			border-spacing: 0px !important;
-			line-height: 20px !important;
-		}
-		.tvshows-list-item {
-			font-weight: $font-light;
-			width: 100%;
-			font-size: 16px;
-			text-align: left !important;
-			transition: 0.8s padding ease;
-		}
-		.tvshows-list-item:hover {
-			background-color: #d9e6f2;
-		}
-		.episode-poster-container {
-			height: 150px;
-			display: block;
-			position: relative;
-			z-index: 1;
-		}
-		.episode-poster {
-			height: 150px;
-			display: block;
-            position: absolute;
-			z-index: 2;
-		}
-		.episode-watched {
-		    position: relative;
-			z-index: 3;
-			color: #91d160;
-			--iron-icon-stroke-color: #91d160;
-		}
-		.episode-showtitle {
-			padding: 0px 0px 0px 15px;
-			font-weight: 500;
-			font-size: 18px;
-		}
-		.episode-seasoninfo {
-			padding: 0px 0px 0px 0px;
-			font-size: 12px;
-			text-align: right;
-		}
-		.episode-title {
-			padding: 5px 0px 0px 15px;
-		}
-		.episode-date {
-			padding: 0px 0px 0px 0px;
-			text-align: right;
-			font-size: 10px;
-		}
-		
-	</style>
+    <style include="ha-style">
+      .container {
+        height: 100%;
+        vertical-align: top;
+        position: relative;
+        padding: 0px 10px 0px 10px;
+      }
+      .loading-container {
+        text-align: center;
+        padding: 8px;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .tvshows-list-table {
+        width: 100%;
+        border-spacing: 0px !important;
+      }
+      .tvshows-list-table td {
+        border: none !important;
+        border-spacing: 0px !important;
+        line-height: 20px !important;
+      }
+      .tvshows-list-item {
+        font-weight: $font-light;
+        width: 100%;
+        font-size: 16px;
+        text-align: left !important;
+        transition: 0.8s padding ease;
+      }
+      .tvshows-list-item:hover {
+        background-color: #d9e6f2;
+      }
+      .episode-table {
+        width: 100%;
+      }
+      .episode-table td {
+        border: none !important;
+        border-spacing: 0px !important;
+        line-height: 20px !important;
+      }
+      .episode-poster-container {
+        height: 150px;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+      .episode-poster {
+        height: 150px;
+        display: block;
+              position: absolute;
+        z-index: 2;
+      }
+      .episode-watched {
+          position: relative;
+        z-index: 3;
+        color: #91d160;
+        --iron-icon-stroke-color: #91d160;
+      }
+      .episode-showtitle {
+        padding: 0px 0px 0px 15px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .episode-seasoninfo {
+        padding: 0px 0px 0px 0px;
+        font-size: 12px;
+        text-align: right;
+      }
+      .episode-title {
+        padding: 5px 0px 0px 15px;
+      }
+      .episode-date {
+        padding: 0px 0px 0px 0px;
+        text-align: right;
+        font-size: 10px;
+      }
+    </style>
     <app-header-layout has-scrolling-region="">
-	
       <app-header fixed="">
         <app-toolbar>
-	      <ha-menu-button narrow="[[narrow]]" show-menu="[[showMenu]]"></ha-menu-button>
-	      <div main-title="">[[panel.title]]</div>
-		  <paper-icon-button icon="mdi:update" on-tap="handleUpdateLibClick" alt="Update library"></paper-icon-button>
-		  <paper-icon-button icon="mdi:download" on-tap="handleCheckNewClick" alt="Download new episodes"></paper-icon-button>
-		  <paper-icon-button icon="mdi:refresh" on-tap="handleRefreshClick" alt="Refresh"></paper-icon-button>
-	    </app-toolbar>
-	  </app-header>
-	  
-	  <div class='content'>
+          <ha-menu-button narrow="[[narrow]]" show-menu="[[showMenu]]"></ha-menu-button>
+          <div main-title="">[[panel.title]]</div>
+          <paper-icon-button icon="mdi:refresh" on-tap="handleRefreshClick" alt="Refresh"></paper-icon-button>
+        </app-toolbar>
+      </app-header>
+
+      <div class="container">
         <h1>Recent Episodes</h1>
-		<div hidden$="[[!isLoading]]" class='loading-container'>
-			<paper-spinner active alt='Updating history data'></paper-spinner>
-		</div>
-	    <table class='tvshows-list-table'>
-          <template is='dom-repeat' items='[[_episodes]]' as='episode'>
-			<tr>
-              <td on-tap='episodeSelected'>
-                <div class="tvshows-list-item">
-                  <table style="width:100%">
-                    <tr>
-                      <td style="width:100px">
-						<div class="episode-poster-container">
-						  <img src=[[artUrl(episode.art)]] class="episode-poster">
-						  <iron-icon icon="mdi:check-circle-outline" class="episode-watched" style="display: [[isWatchedDisplayType(episode.playcount)]];"></iron-icon>
-						</div>
-                      </td>
-                      <td style="vertical-align:top; width:*">
-                        <div class="episode-showtitle">[[episode.showtitle]]</div>
-                        <div class="episode-seasoninfo">season [[episode.season]]&nbsp;&nbsp;&nbsp; episode [[episode.episode]]</div>
-                        <div class="episode-title">[[episode.title]]</div>
-                        <div class="episode-date">[[episode.dateadded]]</div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </td>
-            </tr>
-          </template>
+        <div hidden$="[[!isLoading]]" class='loading-container'>
+          <paper-spinner active alt='Updating history data'></paper-spinner>
+        </div>
+        <table class='tvshows-list-table'>
+            <template is='dom-repeat' items='[[_episodes]]' as='episode'>
+              <tr>
+                <td on-tap='episodeSelected' style="padding:0px">
+                  <div class='tvshows-list-item'>
+                    <table class='episode-table'>
+                      <tr style="width:100%; padding:0px; margin:0px; border:0px">
+                        <td style="width:100px">
+                          <div class="episode-poster-container">
+                            <img src=[[artUrl(episode.library.art)]] class="episode-poster">
+                            <iron-icon icon="mdi:check-circle-outline" class="episode-watched" style="display: [[isWatchedDisplayType(episode.library.playcount)]];"></iron-icon>
+                          </div>
+                        </td>
+                        <td style="vertical-align:top; width:*">
+                          <div class="episode-showtitle">[[episode.library.showtitle]]</div>
+                          <div class="episode-seasoninfo">season [[episode.library.season]]&nbsp;&nbsp;&nbsp; episode [[episode.library.episode]]</div>
+                          <div class="episode-title">[[episode.library.title]]</div>
+                          <div class="episode-date">[[episode.library.dateadded]]</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </template>
         </table>
-	  </div>
-	</app-header-layout>
-	<paper-toast id="toast" text='' no-cancel-on-outside-click='true'>
+      </div>
+    </app-header-layout>
   </template>
 </dom-module>
 
 <script>
-
 class Log {
-  constructor(DEBUG) {
-	if (DEBUG) {
-	  this.debugLog = console.log.bind(window.console, 'DBG: ');
-	  this.errorLog = console.log.bind(window.console, 'ERR: ');
-	}
-	else {
-	  this.debugLog = function () { };
-	  this.errorLog = function () { };
-	}
+  constructor(debug) {
+  if (debug) {
+    this.debugLog = console.log.bind(window.console, 'DBG: ');
+    this.errorLog = console.log.bind(window.console, 'ERR: ');
+  }
+  else {
+    this.debugLog = function () { };
+    this.errorLog = function () { };
+  }
   }
   d(msg) {
     this.debugLog(msg);
@@ -136,259 +146,166 @@ class Log {
   e(msg) {
     this.errorLog(msg);
   }
-};
-var log = new Log(true);
-
-class KodiWSService {
-  constructor(props) {
-    this.props = props;
-	var kodi_ws_url = 'ws://' + props.host + ':' + props.port;
-	var that = this;
-    log.d('init KodiWSService [connecting to: ' + kodi_ws_url + ']');
-	
-	this.ws = new WebSocket(kodi_ws_url);
-	
-	this.ws.onopen = function () {
-      log.d('Connected to Kodi Web Socket');
-    };
-    
-    this.ws.onerror = function () {
-      log.d('Socket error');
-		that.showNotificationError('Socket error');
-    };
-    
-    this.ws.onclose = function (event) {
-      log.d('Closing socket [' + event.code + ']');
-    };
-  }
-  
-  waitForConnection (callback, attempt) {
-    var service = this;
-    setTimeout(function () {
-      if (service.ws.readyState !== WebSocket.OPEN) {
-        if (attempt > 0 && service.ws.readyState != WebSocket.CLOSED) {
-          log.d('Wait for connection...');
-          service.waitForConnection(callback, attempt - 1);
-        } else {
-          log.e('Could not connect to Kodi!');
-		  if (service.onerror && typeof service.onerror == "function")
-			service.onerror('Could not connect to Kodi!');
-        }
-      } else {
-        callback(service);
-      }
-    }, this.props.timeout * 1000);
-  }
-	
-  send (method, params, onResponseCb = null) {
-    this.waitForConnection(function (service) {
-	  var id = Math.floor((Math.random() * 100) + 1);
-	  log.d('send method:' + method + ', params: ' + JSON.stringify(params));
-      service.ws.send(JSON.stringify({ jsonrpc: '2.0', id: id, method: method, params: params }));
-      service.ws.onmessage = function (message) {
-	    //log.d(message.data);
-        var response = JSON.parse(message.data);
-        //log.d('response: ' + message.data); 
-        if (response.id === id) {
-          if (response.error !== undefined) {
-            var error = response.error;
-            log.d(method + ' : ' + error.message);
-          }
-		  if (service.onmessage && typeof service.onmessage == "function")
-			service.onmessage(response.result);
-          if (onResponseCb && typeof onResponseCb == "function")
-             onResponseCb(response.result);
-        }
-      };	  
-	}, 10);
-  }
 }
+log = new Log(true);
 
-Polymer({
-  is: 'ha-panel-tvshows',
-  properties: {
-    hass: {     // Home Assistant object
-      type: Object,
-    },
-    narrow: {   // If should render in narrow mode
-      type: Boolean,
-      value: false,
-    },
-    showMenu: { // If sidebar is currently shown
-      type: Boolean,
-      value: false,
-    },
-    panel: {    // Home Assistant panel info, panel.config contains config passed to register_panel serverside
-      type: Object,
-    },
-    isLoading: {
-      type: Boolean,
-	  notify: true,
-      value: false,
-    },
+class HaPanelTvShows extends Polymer.Element {
+  static get is() { return 'ha-panel-tvshows'; }
+  
+  static get properties() {
+    return {
+      // Home Assistant object
+      hass: {
+        type: Object,
+        observer: 'hassChanged'
+      },
+      // If should render in narrow mode
+      narrow: {
+        type: Boolean,
+        value: false,
+      },
+      // If sidebar is currently shown
+      showMenu: {
+        type: Boolean,
+        value: false,
+      },
+      // Home Assistant panel info
+      // panel.config contains config passed to register_panel serverside
+      panel: Object,
+      // other params
+      isLoading: {
+        type: Boolean,
+        notify: true,
+        value: true,
+      },
+      timeDifference: {
+        type: Number,
+        value: undefined,
+      },
+      _episodes: {
+        type: Array,
+        notify: true,
+        value: function() {
+          return [];
+        }
+      },
+      who: {
+        type: String,
+        computed: 'computeWho(panel)',
+      },
+    };
+  }
 
-	kodi_host: {
-	  type: String,
-	  computed: 'getKodiHost(panel)',
-	},
-	kodi_port: {
-	  type: String,
-	  computed: 'getKodiPort(panel)',
-	},
-	kodi_port_vfs: {
-	  type: String,
-	  computed: 'getKodiPortVFS(panel)',
-	},
-	
-	_episodes: {
-      type: Array,
-	  notify: true,
-	  value: function() {
-	    return [];//JSON.parse('[{"art":{"season.poster":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f9n7kmOc1y3ualqVXOdTyzXlM1xR.jpg/","thumb":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f49wXpMQRLeyZ2wSX2gcshYZ8aG0.jpg/","tvshow.banner":"image://http%3a%2f%2fthetvdb.com%2fbanners%2fgraphical%2f311713-g6.jpg/","tvshow.fanart":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fjB4WqEilIQKqTqjxmFlFGOtH5VT.jpg/","tvshow.poster":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f8WGxtxn81ncqiVPzvJcuvSCQcdR.jpg/"},"dateadded":"2016-12-13 23:57:15","episode":10,"episodeid":657,"fanart":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fjB4WqEilIQKqTqjxmFlFGOtH5VT.jpg/","file":"/media/Media/Series/Timeless/Season01/Timeless.S01E10.720p.HDTV.x264-KILLERS/Timeless.S01E10.720p.HDTV.x264-KILLERS.mkv","label":"1x10. The Capture of Benedict Arnold","lastplayed":"2016-12-14 00:58:05","playcount":1,"resume":{"position":0.0,"total":0.0},"season":1,"showtitle":"Timeless","thumbnail":"image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f49wXpMQRLeyZ2wSX2gcshYZ8aG0.jpg/","title":"The Capture of Benedict Arnold","tvshowid":31}]')
-	  }
-    },
-  },
-  
-  kodiws: null,
-  
-  attached: function () {
-	this.getRecentEpisodes();
-  },
-  
-  handleUpdateLibClick: function () {
-	this.updateLibrary();
-  },
-  handleCheckNewClick: function () {
-	this.showNotificationInfo('Not yet implemented');
-  },
-  handleRefreshClick: function () {
+  constructor() {
+    super();
+  }
+
+  ready() {
+    super.ready();
+    log.d("ready");
+    
+    this.initEventPorcessing();
+    this.getRecentEpisodes();
+  }
+
+  hassChanged(newHass, oldHass) {
+    //this.handleEntities(newHass.states);
+    //log.d('hassChanged')
+  }
+
+  initEventPorcessing() {
+    self = this;
+    var source = new EventSource("/api/stream"); //var source = new EventSource("/api/stream?api_password=YOUR_PASSWORD");
+
+    source.onmessage = function(event) {
+      // skip ping events
+      if ("ping" === event.data) {
+        return;
+      }
+
+      var obj = JSON.parse(event.data);
+
+      // store time difference
+      if (obj.time_fired) {
+        let lastEventFiredTime = moment(obj.time_fired).toDate();
+        self.timeDifference = moment().diff(moment(lastEventFiredTime), 'milliseconds');
+        //log.d('init - time difference: ' + self.timeDifference);
+      }
+
+      // process events based on event_type
+      if (obj.event_type == "rssshows_latest") {
+        log.d('RX - received rssshows latest')
+
+        var eplist = JSON.parse(obj.data.latest);
+        //self._episodes = eplist;
+        //for (var i in eplist) {
+        //  console.log(eplist[i]);
+        //  if (typeof ep.library !== 'undefined')
+        //    self._episodes.append(eplist[i])
+        //}
+        self._episodes = eplist.sort(function (a, b) {
+          if (a.library.playcount > b.library.playcount) return 1;
+          else if (a.library.playcount < b.library.playcount) return -1;
+          else {
+            if (a.library.dateadded < b.library.dateadded) return 1;
+            else return -1;
+          }
+        });
+
+        self.isLoading = false;
+      }
+      //else if (obj.event_type == "state_changed") {
+      //  log.d('RX - received state changed')
+      //}
+    }
+  }
+
+  getRecentEpisodes() {
     this._episodes = [];
-	this.getRecentEpisodes();
-  },
+    log.d('TX - call service rssshows.latest')
+    this.hass.callService('rssshows', 'latest', {});
+  }
 
-  episodeSelected: function (ev) {
-    var index = ev.model.index;
-    ev.preventDefault();
-  },
-  
-  getRecentEpisodes: function () {
-  	  this.isLoading = true;
-      if (this.kodiws == null) {
-	    this.kodiws = new KodiWSService({host: this.kodi_host, port: this.kodi_port, timeout: 2});
-	  }
-	  
-      log.d('get recent episodes');
-	  var that = this;
-      this.kodiws.onerror = function (msg) {
-	    log.e(msg);
-		that.showNotificationError(msg);
-		that.isLoading = false;
-	  }
-      this.kodiws.send('VideoLibrary.getRecentlyAddedEpisodes', {
-        "limits": { "start": 0, "end": 20 },
-        "properties": ["title", "season", "episode", "showtitle", "tvshowid", "fanart", "thumbnail", "art", "dateadded", "file", "playcount", "lastplayed", "resume"]},
-        function (data) {
-		  var episodeList = data.episodes.sort(function (a, b) {
-			if (a.playcount > b.playcount) return 1;
-			else if (a.playcount < b.playcount) return -1;
-			else {
-			  if (a.dateadded < b.dateadded) return 1;
-			  else return -1;
-			}
-		  });
-          log.d(episodeList);
-		  that.isLoading = false;
-		  that._episodes = episodeList;
-		}
-	  );
-  },
-  
-  updateLibrary: function () {
-  	  this.isLoading = true;
-      if (this.kodiws == null) {
-	    this.kodiws = new KodiWSService({host: this.kodi_host, port: this.kodi_port, timeout: 2});
-	  }
-	  
-      log.d('update library');
-	  var that = this;
-      this.kodiws.onerror = function (msg) {
-	    log.e(msg);
-		that.showNotificationError(msg);
-		that.isLoading = false;
-	  }
-      this.kodiws.send('VideoLibrary.Scan', {
-        "directory":"/media/Media/Series/" },
-        function (data) {
-          log.d(data);
-		  that.isLoading = false;
-		  if (data == "OK")
-			that.showNotificationInfo('Library update started');
-		  else
-			that.showNotificationError(data);
-		}
-	  );
-  },
+  handleRefreshClick() {
+    self.isLoading = true;
+    this.getRecentEpisodes();
+  }
 
-  getKodiHost: function (panel) {
-    return panel && panel.config && panel.config.kodi_host ? panel.config.kodi_host : '';
-  },
-  
-  getKodiPort: function (panel) {
-    return panel && panel.config && panel.config.kodi_port ? panel.config.kodi_port : '';
-  },
-  
-  getKodiPortVFS: function (panel) {
-    return panel && panel.config && panel.config.kodi_port_vfs ? panel.config.kodi_port_vfs : '';
-  },
-  
-  artUrl: function(art) {
-	var elem = null;
+  episodeSelected(ev) {
+    //var index = ev.model.index;
+    //ev.preventDefault();
+  }
+
+  artUrl(art) {
+    var elem = null;
     var path = 'season.poster';
     if ((typeof art[path] == 'string') && art[path].startsWith("image://http%3a%2f%2")) {
-	  elem = art[path];
+      elem = art[path];
     }
     else {
-	  var path = 'tvshow.poster';
+      var path = 'tvshow.poster';
       if ((typeof art[path] == 'string') && art[path].startsWith("image://http%3a%2f%2")) {
-	    elem = art[path];
+        elem = art[path];
       }
-	}
-	if (elem != null) {
-	  var enURI = art[path].substring(8, art[path].length - 1);
-	  return decodeURI(decodeURIComponent(enURI.replace(/\+/g, " ")));
-	}
-	else {
-	  return "nopic";
-	}
-  },
+    }
+    if (elem != null) {
+      var enURI = art[path].substring(8, art[path].length - 1);
+      return decodeURI(decodeURIComponent(enURI.replace(/\+/g, " ")));
+    }
+    else {
+      return "nopic";
+    }
+  }
   
-  isWatchedDisplayType: function(playCount) {
+  isWatchedDisplayType(playCount) {
     if (playCount > 0)
-	  return 'block';
-	return 'none';
-  },
-  
-  episodeUrl: function(episode) {
-    if (typeof episode == 'string') {
-      return 'cvlc://' + this.kodi_host + ':' + this.kodi_port_vfs + '/vfs/' + encodeURIComponent(episode);
-    }
-    return episode;
-  },
-  
-  showNotificationInfo: function (newText) {
-    if (newText) {
-	  this.$.toast.text = newText;
-	  this.$.toast.style.backgroundColor = '#0088cc';
-      this.$.toast.show();
-    }
-  },
-  showNotificationError: function (newText) {
-    if (newText) {
-	  this.$.toast.text = newText;
-	  this.$.toast.style.backgroundColor = '#cc0000';
-      this.$.toast.show();
-    }
-  },
+      return 'block';
+    return 'none';
+  }
 
-});
+  computeWho(panel) {
+    return panel && panel.config && panel.config.testvar ? panel.config.testvar : 'World';
+  }
+}
+customElements.define(HaPanelTvShows.is, HaPanelTvShows);
 </script>

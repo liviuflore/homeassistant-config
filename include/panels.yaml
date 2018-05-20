@@ -3,6 +3,5 @@
   sidebar_icon: mdi:video
   url_path: tvshows
   config:
-    kodi_host: !secret kodi_host
-    kodi_port: !secret kodi_port
-    kodi_port_vfs: !secret kodi_port_vfs
+    testvar: xxx
+    log_level: error

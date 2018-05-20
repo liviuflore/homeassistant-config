@@ -27,9 +27,12 @@ logbook:
 ### LOGGING
 
 logger:
-  default: info
+  default: warning
   logs:
-    homeassistant.components.sensor: debug
+    homeassistant.components.sensor: warning
+    custom_components: debug
+    custom_components.sensor: warning
+    rssdld: debug
 
 
 ### CONNECTION
@@ -64,8 +67,9 @@ sensor: !include include/sensors.yaml
 media_player: !include include/media_players.yaml
 device_tracker: !include include/device_trackers.yaml
 
-#panel_custom: !include include/panels.yaml
-#panel_iframe: !include include/iframes.yaml
+panel_custom: !include include/panels.yaml
+panel_iframe: !include include/iframes.yaml
+
 
 history_graph:
   temperature:

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /home/homeassistant/.homeassistant
+source /srv/homeassistant/bin/activate
 
 git add .
 git status

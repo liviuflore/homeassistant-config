@@ -3,6 +3,7 @@ media:
   entities:
     - group.players
     - group.transmission
+    - group.rss_shows
 
 players:
   name: Players

@@ -1,0 +1,924 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"to",
+				"torrent"
+			],
+			[
+				"add",
+				"addEpisode"
+			],
+			[
+				"db",
+				"dbUpdate"
+			],
+			[
+				"New",
+				"NEW"
+			],
+			[
+				"q",
+				"q720p"
+			],
+			[
+				"home",
+				"homeassistant"
+			],
+			[
+				"cache",
+				"cache_path_tmp"
+			],
+			[
+				"set",
+				"set_inprogress"
+			],
+			[
+				"get",
+				"getall"
+			],
+			[
+				"do",
+				"download-dir"
+			],
+			[
+				"chec",
+				"checkLibrary"
+			],
+			[
+				"RSS",
+				"RssFeed"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"compo",
+				"component"
+			],
+			[
+				"revers",
+				"reverseLookup"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"them",
+				"themeName"
+			],
+			[
+				"IsObj",
+				"IsObjectiveSettingAttrs"
+			],
+			[
+				"obj",
+				"objectiveValue"
+			],
+			[
+				"objective",
+				"objectiveType"
+			],
+			[
+				"ac",
+				"activities"
+			],
+			[
+				"obje",
+				"objectiveType"
+			],
+			[
+				"objec",
+				"objectiveType"
+			],
+			[
+				"rename",
+				"renamed_extracted_dir"
+			],
+			[
+				"extract",
+				"extracted_dir"
+			],
+			[
+				"sen",
+				"sentences"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "demo.py",
+			"settings":
+			{
+				"buffer_size": 2454,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "rssdld/rssdld.py",
+			"settings":
+			{
+				"buffer_size": 4396,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "rssdld/transmission.py",
+			"settings":
+			{
+				"buffer_size": 2608,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "rssdld/kodidb.py",
+			"settings":
+			{
+				"buffer_size": 2793,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "rssdld/showsdb.py",
+			"settings":
+			{
+				"buffer_size": 2446,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 1 file for \"ac_tool_prefix\"\n\nZ:\\p4\\dev\\packages\\3rdParty\\google_protobuf\\3.5.1\\src\\configure:\n    <binary>\n\n111 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 140,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/Z/p4/dev/packages/3rdParty/google_test/versions.ini",
+			"settings":
+			{
+				"buffer_size": 798,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pysqlw/pysqlw.py",
+			"settings":
+			{
+				"buffer_size": 11402,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rssdld/episode.py",
+			"settings":
+			{
+				"buffer_size": 2920,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 145.0,
+		"last_filter": "json",
+		"selected_items":
+		[
+			[
+				"json",
+				"Indent JSON"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"line",
+				"Line Endings Unify"
+			],
+			[
+				"conv",
+				"Convert Case: Lower Case"
+			],
+			[
+				"sync",
+				"Package Syncing: Push Settings"
+			],
+			[
+				"the",
+				"Boxy Theme: Configuration"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Indent XML"
+			],
+			[
+				"project",
+				"Project: Refresh Folders"
+			],
+			[
+				"op",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"theme",
+				"Material Theme: Configuration"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"color",
+				"Color Picker: Insert Color"
+			],
+			[
+				"colo",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"incre",
+				"Material Theme: Advanced configuration"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 478.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Q/rssdld",
+		"/Q/rssdld/pysqlw",
+		"/Q/rssdld/rssdld"
+	],
+	"file_history":
+	[
+		"/Q/ha_config/panels/tvshows.html",
+		"/Q/ha_config/include/panels.yaml",
+		"/Q/ha_config/configuration.yaml",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/src/configure",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/devappdata/cpd/build#46.sh",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixmaa/main/build#25.sh",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixnamcb/main/build#32.sh",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/build/tool/src/protoc",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/build/tool/src/.libs/protoc",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/build/libs/x86_64/config.guess",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/src/Makefile.am",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/src/aclocal.m4",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/versioninfo.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/versions.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/branchinfo.ini",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/3rdParty/cppcheck/branchinfo#2.ini",
+		"/Z/p4/dev/packages/3rdParty/cppcheck/versions.ini",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/3rdParty/google_test/branchinfo#1.ini",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/3rdParty/google_test/branchinfo#2.ini",
+		"/Z/p4/dev/packages/3rdParty/google_test/versions.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/2.6.1/versioninfo.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/2.6.1/buildinfo.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/3.5.1/build_context.ini",
+		"/Z/p4/dev/packages/3rdParty/google_protobuf/2.6.1/build_context.ini",
+		"/Q/rssdld/rssdld/pysqlw/pysqlw.py",
+		"/H/.homeassistant/README.md",
+		"/D/programs/stats/grafana/data/plugins/vonage-status-panel/dist/module.js",
+		"/D/programs/stats/grafana/data/plugins/vonage-status-panel/dist/status_ctrl.js",
+		"/C/Users/livflore/Desktop/to install",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/away.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/lights.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/settings.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/homesecurity.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/homeassistant.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/packages/wfh.yaml",
+		"//192.168.1.32/homeassistant/packages/notify.yaml",
+		"/D/code/rpi/sampleconfigs/smarthome-master/templates/home_status.yaml",
+		"/D/code/rpi/sampleconfigs/homeassistant-config-arsaboo/packages/weather.yaml",
+		"//192.168.1.32/homeassistant/configuration.yaml",
+		"//192.168.1.32/homeassistant/secrets.yaml",
+		"//192.168.1.32/homeassistant/hass.sublime-project",
+		"//192.168.1.32/homeassistant/include/groups/tab-weather.yaml",
+		"//192.168.1.32/homeassistant/packages/weather.yaml",
+		"//192.168.1.32/homeassistant/include/sensors.yaml",
+		"//192.168.1.32/homeassistant/custom_components/sensor/mitemp.py",
+		"/D/code/rpi/sampleconfigs/homeassistant-config-arsaboo/custom_components/climate/lyric.py",
+		"/D/code/rpi/sampleconfigs/homeassistant-config-arsaboo/custom_components/climate/services.yaml",
+		"//192.168.1.32/homeassistant/include/weather.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/packages/floorplan.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/packages/README.md",
+		"//192.168.1.32/homeassistant/.HA_VERSION",
+		"/C/Users/livflore/AppData/Local/Temp/7zO817DCA0A/package.ini",
+		"/C/Users/livflore/AppData/Local/Temp/7zE8172418B/package.ini",
+		"/Z/p4/dev/ixload/protocols/voice/main/build_context.ini",
+		"/Z/p4/dev2/ixload/protocols/voice/main/build.sh",
+		"/Z/p4/dev2/aptixia/pkgget/pkgget.py",
+		"/Z/p4/dev2/p4.config",
+		"/Z/p4/dev/p4.config",
+		"/D/p4/dev/aptixia/pkgget/test.py",
+		"/D/p4/dev/aptixia/pkgget/pkgget.ini",
+		"/D/p4/dev/packages/sdm/sdmcslib/ixload/build_context.ini",
+		"/D/p4/dev/ixload/apps/ixload/main/ixload_apps-build_context.ini",
+		"/D/code/rpi/HA.config/configuration.yaml",
+		"/D/code/rpi/ha_config/secrets.yaml",
+		"/D/code/rpi/ha_config/include/zones.yaml",
+		"/D/code/rpi/ha_config/include/panels.yaml",
+		"/D/code/rpi/ha_config/include/sensors.yaml",
+		"/D/code/rpi/ha_config/customize.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/www/custom_ui/floorplan/ha-floorplan.html",
+		"/D/code/rpi/ha_config/include/device_trackers.yaml",
+		"/D/code/rpi/ha_commands",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/ixload/packages/diameter/main/build#3.sh",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/ixload/packages/diameter/main/Makefile#4",
+		"/D/p4/dev/aptixia/pkgget/pkgget.py",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/C/Program Files/Ixia/IxOS/8.30-EA-Patch1/IxServ20180219-132154.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/Error_logs_Port_crash/192.20.199.66/C/Program Files/Ixia/IxOS/8.30-EA-Patch1/IxServ20180130-221331.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/ports/10.0.1.12/var/log/kse_crash.log",
+		"/D/p4/customercases/BUG1470745___kse_crash_second_loop/KSE_Port_Crash_New_Logs2_21_2018/192.20.199.66/ports/10.0.1.10/var/log/kse_crash.log",
+		"/D/code/rpi/ha_config/configuration.yaml",
+		"/D/code/rpi/ha_config/include/weather.yaml",
+		"/D/code/rpi/ha_config/include/groups/tab-home.yaml",
+		"/D/code/rpi/sample_ha+config_ccostan/config/www/custom_ui/floorplan/lib/floorplan.js",
+		"/D/code/rpi/HA.config/includes/device_trackers.yaml",
+		"/D/code/rpi/ha_config/include/groups.yaml",
+		"/D/code/rpi/HA.config/includes/sensors.yaml",
+		"/D/code/rpi/HA.config/includes/iframes.yaml",
+		"/D/code/rpi/HA.config/includes/panels.yaml",
+		"/D/code/rpi/HA.config/includes/media_players.yaml",
+		"/D/code/rpi/HA.config/includes/groups/tab-home.yaml",
+		"/D/code/rpi/HA.config/customize.yaml",
+		"/D/code/rpi/ha_config/known_devices.yaml",
+		"/D/code/rpi/ha_config/groups.yaml",
+		"/D/code/rpi/ha_config/automations.yaml",
+		"/D/code/rpi/ha_config/scripts.yaml",
+		"/D/p4/dev/ixload/packages/icc/versions.ini",
+		"/D/code/rpi/miflora/backends/gatttool.py",
+		"/D/code/rpi/miflora/backends/bluepy.py",
+		"/D/code/rpi/miflora/mitemp_poller.py",
+		"/D/code/rpi/miflora/miflora_poller.py",
+		"/D/code/rpi/test_mitemp.py",
+		"/D/code/rpi/mitemp.py",
+		"/D/code/rpi/home-assistant-master/homeassistant/components/sensor/miflora.py",
+		"/Z/p4/dev/ixload/apps/ixload/monthly/ixload_apps-build_context.ini",
+		"/D/code/rpi/miflora/mitemp.py",
+		"/D/code/rpi/home-assistant-master/homeassistant/components/nuimo_controller.py",
+		"/D/p4/dev/ixload/packages/diameter/versions.ini",
+		"/Z/p4/dev/ixload/core/pcpu/main/pcpu/scripts/SConscript",
+		"/C/Users/livflore/AppData/Local/Temp/_tc/bin/spawn_kse.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_busyrtp/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ixnam_dummy/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ixim_arp/lbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/ip6_fragment_dummy/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/driver/kbuild.sh",
+		"/Z/p4/dev/packages/devappdata/cpd/build.sh",
+		"/Z/p4/dev/packages/ixnamcb/main/src/kbuild.sh",
+		"/Z/p4/dev/packages/ixnamcb/main/build.sh",
+		"/Z/p4/dev/aptixia/pkgget/pkgget.py",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixtcp/main/ixstack_v1/src/kbuild#3.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_ixstack/Makefile",
+		"/Z/p4/dev/packages/pstream/main/pstream_ko_lib/lbuild.sh",
+		"/Z/p4/dev/packages/pstream/main/pstr_ixstack/kbuild.sh",
+		"/Z/p4/dev/packages/pstream/versions.ini",
+		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/pstream/branchinfo#29.ini",
+		"/Z/p4/dev/packages/pstream/main/publish.sh",
+		"/Z/p4/dev/packages/pstream/main/build.sh",
+		"/Z/p4/dev/packages/busyrtp/main/build.sh",
+		"/Z/p4/dev/packages/pstream/main/build_context.ini",
+		"/C/Users/livflore/Desktop/WhatsApp Chat with Sf.S.tovarasiFENGshui0197.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 190.0,
+		"where_history":
+		[
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_where",
+			"mktime",
+			"WHERE",
+			"json",
+			"pprint",
+			"json",
+			"IState",
+			"tool_out",
+			"prepare_build_env",
+			"result: no",
+			"no",
+			"C compiler cannot create executables",
+			"ac_pwd",
+			"configure",
+			"configute",
+			"C compiler cannot create executables",
+			"CROSS_TOOL_PREFIX",
+			"CROSS_PATH",
+			"CROSS_COMPILE",
+			"host_alias",
+			"ac_tool_prefix",
+			"mips",
+			"host",
+			"build_lib",
+			"target",
+			"TARGET",
+			"target",
+			"TARGET",
+			"CROSS",
+			"prepare_build_env",
+			"cross",
+			"prepare_build_env",
+			"cross",
+			"prepare_build_env",
+			"CROSS_PATH",
+			"prepare_build_env",
+			"IXIA_CROSS_TOOL",
+			"build_dir",
+			"build_lib",
+			"output",
+			"cross",
+			"linux_3.10 ",
+			"libs",
+			"prepare_build_env",
+			"lib_archs",
+			"archs",
+			"lib_archs",
+			"build_libs",
+			"update_verinfo",
+			"build_tarball",
+			"getEpisode",
+			"db",
+			"DOWNLOADING",
+			"getEpisodes",
+			"addEpisode",
+			"updateEpisode",
+			"dbUpdate",
+			"updateEpisode",
+			"iteritems",
+			"print",
+			"Print",
+			"print",
+			"IState",
+			"mktime",
+			"_execute",
+			"_build_query",
+			"getItems",
+			"se ",
+			"pysqlw"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "demo.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1735,
+								1740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rssdld/rssdld.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1258,
+								1281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rssdld/transmission.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1218,
+								1224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rssdld/kodidb.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2793,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								996,
+								1010
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "rssdld/showsdb.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2234,
+								2243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								140,
+								140
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Z/p4/dev/packages/3rdParty/google_test/versions.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "pysqlw/pysqlw.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10210,
+								10210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "rssdld/episode.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2004,
+								2162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rssdld.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 374.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

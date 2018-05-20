@@ -1,0 +1,65 @@
+###############################################################################
+#   @author         :   Liviu Flore
+#   @date           :   03/14/2018
+#   @package        :   RSSshows
+#   @description    :   stuff related to rss shows auto downloader
+###############################################################################
+homeassistant:
+  customize:  
+
+    rssshows.status:
+      friendly_name: Status
+      icon: mdi:video-account
+
+    rssshows.last_check:
+      friendly_name: Last Check
+      icon: mdi:timelapse
+
+    rssshows.latest_shows:
+      friendly_name: Status
+      icon: mdi:video-account
+      custom_ui_state_card: state-card-latest-shows-rssshows
+
+frontend:
+  extra_html_url:
+    - /local/custom_ui/state-card-latest-shows-rssshows.html
+
+group:
+  rss_shows:
+    name: TV Shows
+    view: no
+    entities:
+      - rssshows.status
+      - rssshows.last_check
+      - rssshows.latest_shows
+
+rssshows:
+  feed_poll_interval: 7200
+  lib_update_interval:  60
+  feeds:
+    - uri: !secret showrss_feed
+      download_dir: "/media/Media/Series/{SeriesName}/Season{SeasonNo:02}/"
+      filters:
+        quality: 
+          - "720p"
+        seriesname: 
+          - "Timeless"
+          - "Fear The Walking Dead"
+          - "Westworld"
+          - "Colony"
+          - "The Expanse"
+          - "The 100"
+          - "Elementary"
+          - "Star Trek Discovery"
+  transmission:
+    host: !secret transmission_host
+    port: !secret transmission_port
+    username: !secret transmission_username
+    password: !secret transmission_password
+  kodi:
+    host: !secret kodi_host
+    port: !secret kodi_port
+    username: !secret kodi_username
+    password: !secret kodi_password
+
+#automation:
