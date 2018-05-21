@@ -12,5 +12,6 @@ journalctl -fu home-assistant@homeassistant.service
 
 # venv
 sudo su -s /bin/bash homeassistant
+cd /home/homeassistant/.homeassistant
 source /srv/homeassistant/bin/activate
 

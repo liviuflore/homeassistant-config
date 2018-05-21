@@ -40,14 +40,19 @@
       }
       .episode-table {
         width: 100%;
+        border-spacing: 0px !important;
       }
       .episode-table td {
         border: none !important;
         border-spacing: 0px !important;
+        padding: 0px !important;
         line-height: 20px !important;
+        white-space: nowrap;
+        vertical-align:top;
       }
       .episode-poster-container {
         height: 150px;
+        width: 104px;
         display: block;
         position: relative;
         z-index: 1;
@@ -55,14 +60,33 @@
       .episode-poster {
         height: 150px;
         display: block;
-              position: absolute;
+        position: absolute;
         z-index: 2;
       }
+      .episode-downloading-container {
+        background-color:#f0f5f5;
+        height: 100%;
+        vertical-align: center;
+      }
+      .episode-downloading {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        padding: 20px 0px 0px 2px;
+        color: #141f1f;
+        --iron-icon-stroke-color: #141f1f;
+      }
       .episode-watched {
-          position: relative;
+        position: relative;
         z-index: 3;
         color: #91d160;
         --iron-icon-stroke-color: #91d160;
+      }
+      .episode-details-container {
+        vertical-align:top;
+        padding: 10px 10px 0px 0px;
+        position: relative;
+        z-index: 1;
       }
       .episode-showtitle {
         padding: 0px 0px 0px 15px;
@@ -103,18 +127,31 @@
                 <td on-tap='episodeSelected' style="padding:0px">
                   <div class='tvshows-list-item'>
                     <table class='episode-table'>
-                      <tr style="width:100%; padding:0px; margin:0px; border:0px">
-                        <td style="width:100px">
+                      <tr>
+                        <td style="width:10px">
                           <div class="episode-poster-container">
-                            <img src=[[artUrl(episode.library.art)]] class="episode-poster">
-                            <iron-icon icon="mdi:check-circle-outline" class="episode-watched" style="display: [[isWatchedDisplayType(episode.library.playcount)]];"></iron-icon>
+                            <div class="episode-downloading-container" style="display: [[isDownloadingDisplayType(episode)]];">
+                              <iron-icon icon="mdi:download-network" class="episode-downloading"></iron-icon>
+                            </div>
+                            <template is="dom-if" if="[[episode.library]]">
+                              <img src=[[artUrl(episode.library.art)]] class="episode-poster">
+                              <iron-icon icon="mdi:check-circle-outline" class="episode-watched" style="display: [[isWatchedDisplayType(episode.library.playcount)]];"></iron-icon>
+                            </template>
                           </div>
                         </td>
-                        <td style="vertical-align:top; width:*">
-                          <div class="episode-showtitle">[[episode.library.showtitle]]</div>
-                          <div class="episode-seasoninfo">season [[episode.library.season]]&nbsp;&nbsp;&nbsp; episode [[episode.library.episode]]</div>
-                          <div class="episode-title">[[episode.library.title]]</div>
-                          <div class="episode-date">[[episode.library.dateadded]]</div>
+                        <td>
+                          <div class="episode-details-container">
+                            <div class="episode-showtitle">[[episode.showname]]</div>
+                            <div class="episode-seasoninfo">season [[episode.season]]&nbsp;&nbsp;&nbsp; episode [[episode.episode]]</div>
+                            <template is="dom-if" if="[[episode.library]]">
+                              <div class="episode-title">[[episode.library.title]]</div>
+                              <div class="episode-date">[[episode.library.dateadded]]</div>
+                            </template>
+                            <template is="dom-if" if="[[episode.torrent]]">
+                              <div class="episode-title">downloading ... [[episode.torrent.progress]]% done</div>
+                              <div class="episode-date">[[episode.torrent.eta]]</div>
+                            </template>
+                          </div>
                         </td>
                       </tr>
                     </table>
@@ -148,6 +185,46 @@ class Log {
   }
 }
 log = new Log(true);
+
+test_data = [{
+  "link":"magnet:?xt=urn:btih:9B8D7A794A5527115F38E07DF3C50555668300D3&dn=Westworld+S02E05+720p+WEB+H264+DEFLATE&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce",
+  "showname":"Westworld",
+  "quality":"720p",
+  "torrent":null,
+  "state":5,
+  "showid":651,
+  "dir":"/media/Media/Series/Westworld/Season02/",
+  "title":"Westworld S02E05 720p WEB H264 DEFLATE",
+  "library": {
+    "title":"Akane No Mai",
+    "thumbnail":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2fepisodes%2f296762%2f6647385.jpg/",
+    "fanart":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2ffanart%2foriginal%2f296762-7.jpg/",
+    "runtime":0,
+    "season":2,
+    "dateadded":"2018-05-21 06:40:48",
+    "file":"/media/Media/Series/Westworld/Season02/Westworld.S02E05.720p.WEB.H264-DEFLATE[rarbg]/Westworld.S02E05.720p.WEB.H264-DEFLATE.mkv",
+    "art":{
+      "tvshow.fanart":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2ffanart%2foriginal%2f296762-7.jpg/",
+      "season.poster":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2fseasons%2f296762-2.jpg/",
+      "tvshow.poster":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2fposters%2f296762-3.jpg/",
+      "tvshow.banner":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2fgraphical%2f296762-g2.jpg/",
+      "thumb":"image://http%3a%2f%2fwww.thetvdb.com%2fbanners%2fepisodes%2f296762%2f6647385.jpg/"},
+    "tvshowid":18,
+    "showtitle":"Westworld",
+    "episode":5,
+    "resume":{
+      "total":0,
+      "position":0},
+    "playcount":0,
+    "lastplayed":""},
+  "torrent": {
+    "progress": 80,
+    "eta": 1225},
+  "season":2,
+  "episode":5,
+  "uid":68120,
+  "hash":"9B8D7A794A5527115F38E07DF3C50555668300D3",
+  "published":1526867717}];
 
 class HaPanelTvShows extends Polymer.Element {
   static get is() { return 'ha-panel-tvshows'; }
@@ -206,6 +283,8 @@ class HaPanelTvShows extends Polymer.Element {
     
     this.initEventPorcessing();
     this.getRecentEpisodes();
+    //this._episodes = test_data;
+    //self.isLoading = false;
   }
 
   hassChanged(newHass, oldHass) {
@@ -251,7 +330,7 @@ class HaPanelTvShows extends Polymer.Element {
             else return -1;
           }
         });
-
+        console.log(JSON.stringify(self._episodes[0]))
         self.isLoading = false;
       }
       //else if (obj.event_type == "state_changed") {
@@ -299,6 +378,11 @@ class HaPanelTvShows extends Polymer.Element {
   
   isWatchedDisplayType(playCount) {
     if (playCount > 0)
+      return 'block';
+    return 'none';
+  }
+  isDownloadingDisplayType(episode) {
+    if (!episode.library && episode.torrent)
       return 'block';
     return 'none';
   }

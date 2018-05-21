@@ -1,8 +1,7 @@
 weather:
   view: yes
   entities:
-#    - group.weather_c
-    - group.weather_card_current
     - weather.weather
+    - group.weather_card_current
     - group.weather_card_forecast
 
