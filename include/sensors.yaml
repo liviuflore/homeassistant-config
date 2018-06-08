@@ -1,12 +1,22 @@
 # home sensors
 
-- platform: mitemp
+- platform: mitemp_bt
   mac: '4C:65:A8:D0:46:11'
   name: 'TH_livingroom'
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
 
-- platform: mitemp
+- platform: mitemp_bt
   mac: '4C:65:A8:D0:45:EF'
   name: 'TH_bedroom'
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
 
 
 # transmission

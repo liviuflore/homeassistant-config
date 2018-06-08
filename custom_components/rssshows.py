@@ -6,16 +6,15 @@ import voluptuous as vol
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_time_interval
 
-# using the folowing requires manual dependencies install (see each custom dependencie for requirements.txt)
+# using the folowing requires manual dependencies install (see each custom dependency for requirements.txt)
 sys.path.append(os.path.join(sys.path[0], "custom_dependencies"))
 _LOGGER = logging.getLogger(__name__)
 
-from rssdld.rssdld import RSSdld
-from rssdld.episode import IState
-
-
 DOMAIN = "rssshows"
 DEPENDENCIES = []
+
+from rssdld.rssdld import RSSdld
+from rssdld.episode import IState
 
 EVENT_RSSSHOWS = "rssshows"
 EVENT_RSSSHOWS_LATEST = "rssshows_latest"
@@ -97,7 +96,7 @@ class RSSshowsManager(object):
         rssdld.close()
 
         for ep in latest:
-            _LOGGER.debug("{:<24s} S{:02d}E{:02d} {:12s} {:s} {:4d}% {:s} pc:{:d}".format(ep.showname, ep.season, ep.episode, IState(ep.state).name, ep.title, 
+            _LOGGER.debug("{:<24s} S{:02d}E{:02d} {:12s} {:s} {:4d}% {:s} pc:{:f}".format(ep.showname, ep.season, ep.episode, IState(ep.state).name, ep.title, 
                 ep.torrent.progress if ep.torrent else -1, 
                 ep.library.dateadded if ep.library else 'none',
                 ep.library.playcount if ep.library else -1))

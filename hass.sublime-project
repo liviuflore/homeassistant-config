@@ -3,7 +3,7 @@
 	[
 		{
 			"path": ".",
-			"folder_exclude_patterns": [".cloud", "deps", "tts"],
+			"folder_exclude_patterns": [".cloud", "deps", "tts", "__pycache__"],
 			"file_exclude_patterns": [".uuid", "home-assistant.*", "*.db*"]
 		}
 	]

@@ -35,7 +35,7 @@ group:
 
 rssshows:
   feed_poll_interval: 7200
-  lib_update_interval:  60
+  lib_update_interval: 300
   feeds:
     - uri: !secret showrss_feed
       download_dir: "/media/Media/Series/{SeriesName}/Season{SeasonNo:02}/"

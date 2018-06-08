@@ -1,5 +1,5 @@
 
-<script src="/local/custom_ui/lib/moment.min.js"></script>
+<!--<script src="/local/custom_ui/lib/moment.min.js"></script>-->
 
 <meta name="viewport" content="width=device-width">
 
@@ -306,8 +306,8 @@ class HaPanelTvShows extends Polymer.Element {
 
       // store time difference
       if (obj.time_fired) {
-        let lastEventFiredTime = moment(obj.time_fired).toDate();
-        self.timeDifference = moment().diff(moment(lastEventFiredTime), 'milliseconds');
+        //let lastEventFiredTime = moment(obj.time_fired).toDate();
+        //self.timeDifference = moment().diff(moment(lastEventFiredTime), 'milliseconds');
         //log.d('init - time difference: ' + self.timeDifference);
       }
 

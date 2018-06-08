@@ -29,9 +29,9 @@ logbook:
 logger:
   default: warning
   logs:
-    homeassistant.components.sensor: warning
+#    homeassistant.components.sensor.mitemp_bt: debug
     custom_components: debug
-    custom_components.sensor: warning
+#    custom_components.sensor: warning
     rssdld: debug
 
 
@@ -77,12 +77,14 @@ history_graph:
     entities:
       - sensor.th_livingroom_temperature
       - sensor.th_bedroom_temperature
+      - sensor.dark_sky_temperature
     hours_to_show: 72
   humidity:
     name: Humidity
     entities:
       - sensor.th_livingroom_humidity
       - sensor.th_bedroom_humidity
+      - sensor.dark_sky_humidity
     hours_to_show: 72
 
 #automation: !include include/automations.yaml

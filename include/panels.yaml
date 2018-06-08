@@ -3,5 +3,4 @@
   sidebar_icon: mdi:video
   url_path: tvshows
   config:
-    testvar: xxx
     log_level: error
