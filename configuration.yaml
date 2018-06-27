@@ -47,11 +47,11 @@ logger:
 ### EXTRA COMPONENTS
 
 # Discover some devices automatically
-#discovery:
+discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
 # Cloud
-cloud:
+# cloud:
 # Update HASS
 updater:
 
@@ -66,6 +66,19 @@ group: !include_dir_merge_named include/groups
 sensor: !include include/sensors.yaml
 media_player: !include include/media_players.yaml
 device_tracker: !include include/device_trackers.yaml
+light:
+  platform: limitlessled
+  bridges:
+    - host: 192.168.1.110
+      groups:
+      - number: 1
+        type: rgbw
+        name: Bedroom
+      - number: 2
+        type: rgbw
+        name: Livingroom
+#tradfri:
+#  host: IP_ADDRESS
 
 panel_custom: !include include/panels.yaml
 panel_iframe: !include include/iframes.yaml

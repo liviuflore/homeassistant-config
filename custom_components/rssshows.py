@@ -97,9 +97,9 @@ class RSSshowsManager(object):
 
         for ep in latest:
             _LOGGER.debug("{:<24s} S{:02d}E{:02d} {:12s} {:s} {:4d}% {:s} pc:{:f}".format(ep.showname, ep.season, ep.episode, IState(ep.state).name, ep.title, 
-                ep.torrent.progress if ep.torrent else -1, 
+                int(ep.torrent.progress) if ep.torrent else -1, 
                 ep.library.dateadded if ep.library else 'none',
-                ep.library.playcount if ep.library else -1))
+                int(ep.library.playcount) if ep.library else -1))
             
         new = sum((ep.state == IState.NEW.value) for ep in latest)
         downloading = sum((ep.state > IState.NEW.value and ep.state < IState.AVAILABLE.value) for ep in latest)

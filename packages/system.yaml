@@ -171,7 +171,7 @@ sensor:
     name: My Domain
 
   - platform: rest
-    resource: http://ip.jsontest.com
+    resource: https://api.ipify.org?format=json
     name: external_ip
     value_template: '{{ value_json.ip }}'
     scan_interval: 86400

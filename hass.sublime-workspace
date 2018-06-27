@@ -111,7 +111,17 @@
 			"file": "include/media_players.yaml",
 			"settings":
 			{
-				"buffer_size": 301,
+				"buffer_size": 332,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "include/groups/tab-media.yaml",
+			"settings":
+			{
+				"buffer_size": 459,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -119,16 +129,34 @@
 			"file": "configuration.yaml",
 			"settings":
 			{
-				"buffer_size": 1742,
+				"buffer_size": 2055,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/groups/tab-home.yaml",
+			"settings":
+			{
+				"buffer_size": 1004,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "custom_components/rssshows.py",
 			"settings":
 			{
-				"buffer_size": 6374,
+				"buffer_size": 6379,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "panels/tvshows.html",
+			"settings":
+			{
+				"buffer_size": 12227,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -143,18 +171,10 @@
 			}
 		},
 		{
-			"file": "panels/tvshows.html",
-			"settings":
-			{
-				"buffer_size": 12216,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "packages/rssshows.yaml",
 			"settings":
 			{
-				"buffer_size": 1702,
+				"buffer_size": 1751,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -197,26 +217,27 @@
 			"file": "include/sensors.yaml",
 			"settings":
 			{
-				"buffer_size": 1656,
+				"buffer_size": 1822,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "custom_components/sensor/mitemp.py",
-			"settings":
-			{
-				"buffer_size": 5635,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "include/panels.yaml",
 			"settings":
 			{
-				"buffer_size": 135,
+				"buffer_size": 118,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gitupdate.sh",
+			"settings":
+			{
+				"buffer_size": 286,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -344,10 +365,23 @@
 		"/R",
 		"/R/custom_components",
 		"/R/custom_components/sensor",
+		"/R/custom_dependencies",
+		"/R/custom_dependencies/rssdld",
+		"/R/include",
+		"/R/include/groups",
+		"/R/packages",
 		"/R/panels"
 	],
 	"file_history":
 	[
+		"/C/Users/livflore/Desktop/stream.html",
+		"/C/Users/livflore/Desktop/ssh.txt",
+		"/D/p4/regression/IxLoadRunTests.config",
+		"/D/p4/regression/run_island_in_loop.bat",
+		"/D/p4/regression/Repository4/test1_hwrtp/RXF_list.txt",
+		"/D/p4/regression/Repository4/test1_hwrtp/test1_hwrtp.py",
+		"/D/p4/regression/Scripts/RunFileExe_liviu_loop.tcl",
+		"/R/custom_components/sensor/mitemp.py",
 		"/R/secrets.yaml",
 		"/R/packages/notify.yaml",
 		"/R/include/groups/tab-climate.yaml",
@@ -467,15 +501,7 @@
 		"/Z/p4/dev/packages/ixnamcb/main/build_context.ini",
 		"/Z/p4/dev/packages/devappdata/cpd/build_context.ini",
 		"/D/p4/dev/packages/pstream/main/build_context.ini",
-		"/Z/p4/dev/packages/pstream/main/driver/pstream_stats.c",
-		"/Z/p4/dev/packages/pstream/main/driver/pstream_stream.c",
-		"/Z/p4/dev/packages/devappdata/cpd/src/kbuild.sh",
-		"/Z/p4/dev/packages/devappdata/cpd/src/Makefile",
-		"/C/Users/livflore/AppData/Local/Temp/p4v/CZC7428G2V_ssl_uscal-cm-p4-1.lbj.is.keysight.com_1666/packages/ixtcp/main/daily#98.sh",
-		"/Z/p4/dev/packages/devappdata/cpd/components/common/8.50/ixia-linux/Source/linux/scripts/build-module.sh",
-		"/Z/p4/dev/packages/ixnamcb/main/publish.sh",
-		"/Z/p4/dev/packages/ixnamcb/versions.ini",
-		"/Z/p4/dev/packages/ixnamcb/main/src/Makefile"
+		"/Z/p4/dev/packages/pstream/main/driver/pstream_stats.c"
 	],
 	"find":
 	{
@@ -498,6 +524,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"AddNetworkStat",
+			"EGTP_CIoT___Errors_StatList",
+			"AddStat",
+			"StatList",
+			"statList",
+			"Signaling__VoIPSip__StatList",
+			"timeDifference",
 			"moment",
 			"_update",
 			"rss_shows",
@@ -591,7 +624,7 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
@@ -606,15 +639,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 301,
+						"buffer_size": 332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								332,
+								332
 							]
 						],
 						"settings":
@@ -625,24 +658,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "configuration.yaml",
+					"file": "include/groups/tab-media.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1742,
+						"buffer_size": 459,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1345,
-								1345
+								189,
+								189
 							]
 						],
 						"settings":
@@ -652,27 +685,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 480.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "custom_components/rssshows.py",
+					"file": "configuration.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6374,
+						"buffer_size": 2055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2143,
-								2154
+								958,
+								958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 479.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "include/groups/tab-home.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "custom_components/rssshows.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3665,
+								3665
 							]
 						],
 						"settings":
@@ -680,14 +773,44 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 791.0,
+						"translation.y": 1367.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
+					"file": "panels/tvshows.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "hass.sublime-project",
 					"semi_transient": false,
 					"settings":
@@ -711,54 +834,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "panels/tvshows.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 12216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17,
-								49
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "packages/rssshows.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1702,
+						"buffer_size": 1751,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1317,
-								1317
+								761,
+								761
 							]
 						],
 						"settings":
@@ -768,14 +861,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 144.0,
+						"translation.y": 95.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"semi_transient": false,
 					"settings":
 					{
@@ -821,11 +914,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "custom_dependencies/rssdld/transmission.py",
 					"semi_transient": false,
 					"settings":
@@ -849,11 +942,11 @@
 						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "custom_dependencies/rssdld/showsdb.py",
 					"semi_transient": false,
 					"settings":
@@ -877,11 +970,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "custom_dependencies/rssdld/kodidb.py",
 					"semi_transient": false,
 					"settings":
@@ -905,24 +998,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "include/sensors.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1656,
+						"buffer_size": 1822,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								766,
-								766
+								624,
+								624
 							]
 						],
 						"settings":
@@ -939,48 +1032,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "custom_components/sensor/mitemp.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3958,
-								3958
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1607.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "include/panels.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 135,
+						"buffer_size": 118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								97,
+								97
 							]
 						],
 						"settings":
@@ -991,7 +1056,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "gitupdate.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

@@ -51,6 +51,8 @@ rssshows:
           - "The 100"
           - "Elementary"
           - "Star Trek Discovery"
+          - "12 Monkeys"
+          - "Salvation"
   transmission:
     host: !secret transmission_host
     port: !secret transmission_port

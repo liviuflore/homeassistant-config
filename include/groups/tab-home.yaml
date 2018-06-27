@@ -6,6 +6,7 @@ default_view:
     - group.family_info
     - group.travel_times
     - group.climate_home
+    - group.lights_home
     - weather.weather
 
 liviu:
@@ -45,5 +46,9 @@ climate_home:
     - sensor.th_bedroom_temperature
     - sensor.th_bedroom_humidity
 
-
+lights_home:
+  name: Lights
+  entities:
+    - light.livingroom
+    - light.bedroom
 
